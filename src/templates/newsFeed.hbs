@@ -1,0 +1,60 @@
+{{#each this}}
+<li class="news-item">
+    <div class="avatar-user-name"> <a href="./html/profile.html" target="_blank">
+        <img class="avatar-image" src={{authorMeta.avatar}} alt="{{authorMeta.nickName}}">
+        </a>
+ 
+<p class="user-name-image">{{authorMeta.nickName}}</p></div>
+   <div class="hashtags">
+  {{#each hashtags}}
+ <p class="hashtag-num">#{{name}}</p>
+     {{/each}}
+   </div>
+
+  <video width="250" controls="controls" class='video' preload="true" autoplay="true" loop="loop" muted="muted" volume="0">
+      <source src={{videoUrl}} />
+       {{!-- <source src={{webVideoUrl}} type="video/ogg"/> --}}
+  </video> <div class="text-wrapper">
+  <p class="text">{{text}}</p>
+  <p class="likes">Likes: {{authorMeta.heart}}</p>
+  <p class="comments">Comments: {{commentCount}}</p>
+  </div>
+
+</li>
+{{/each}}
+
+
+
+
+   {{!-- <div class="hero__imagebox vote-average__position">
+
+   <img class="hero__image" src={{poster}} alt="{{title}}" data-src="{{id}}">
+ 
+   <span class="parameter__value--avg parameter__value parameter__position">{{vote_average}}</span>
+   </div>
+   <h2 class="hero__title">{{title}}</h1>
+   <div class="hero__descriptionbox">
+      <ul class="descriptionbox__list">
+         <li class="descriptionbox__item">
+            {{#each genres_type}}
+               <span class="hero__genres">{{this}}</span>
+               <span class="symbol">,</span>
+            {{/each}}
+         </li>
+         <li class="descriptionbox__item">
+            <p class="hero__year">{{date}}</p>
+         </li>
+      </ul>
+   </div> --}}
+
+
+{{!-- <video controls width="250">
+
+    <source src="/media/cc0-videos/flower.webm"
+            type="video/webm">
+
+    <source src="/media/cc0-videos/flower.mp4"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</video> --}}
